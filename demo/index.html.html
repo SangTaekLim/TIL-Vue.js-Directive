@@ -1,0 +1,43 @@
+<html>
+
+<head>
+    <title>Vue.js</title>
+</head>
+
+<body>
+    <div id="app">
+       <p v-if="flag">디렉티브</p>
+       <ul>
+           <li v-for="ary in  ary">{{ ary }}</li>
+       </ul>
+       
+       <p v-bind:id="id1">{{ id1 }}</p>
+       <p v-bind:class="class1">{{ class1 }}</p>
+       <p v-bind:name="name1">{{ name1 }}</p>
+       <p v-bind:data-page="data1">{{ data1 }}</p>
+
+       <button v-on:click="vueEvent">클릭</button>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.2/dist/vue.js"></script>
+    <script>
+      new Vue({
+         el:"#app",
+         data:{
+             flag: true,
+             ary: ['1번' , '2번', '3번'],
+             id1 : 'id_test',
+             class1 : 'class_test',
+             name1 : 'name_test',
+             data1 : '11111'
+         },
+         methods:{
+             vueEvent: function(){
+                return alert("123");
+             }
+         }
+      })
+    </script>
+</body>
+
+</html>
