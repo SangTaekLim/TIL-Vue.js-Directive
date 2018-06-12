@@ -2,4 +2,13 @@
 
 ## v-if
 
-    test
+    뷰 데이터 값의 참거짓
+
+~~
+    <p v-if="flag">참 인가 거짓인가</p>
+~~
+~~~c
+    data:{
+        flag: true
+    }
+~~~
